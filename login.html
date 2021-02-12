@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+			function checkDetails(){
+				var n = document.getElementById("username").value;
+				var p = document.getElementById("pw").value;
+				if(n == "" && p == ""){
+				   alert("please fill out the username and password");
+					return false;
+
+				}
+				else if(n == ""){
+				 	alert("please fill out the usename");
+				 	return false;
+				 	
+				 }
+				else if(p == ""){
+                       alert("please enter your password");
+                       return false;
+				 }
+				 else{
+				 	return true;
+				 }
+
+			}
+
+		</script>
+<meta charset="UTF-8">
+<link rel="stylesheet" type = "text/css" href="signIn_styles.css">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Hind:wght@500&family=Questrial&family=Varela+Round&display=swap" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<style>
+div{
+
+   background: #black;
+	margin:auto;
+	width:700px;
+	top:20%;
+	filter:opacity(96%);
+	font-family: 'Questrial', sans-serif;
+	font-size: 13px;
+	border-radius:12px;	
+	margin-top:140px;
+}
+body{
+	background-color: #06021c;
+	background-repeat: no-repeat;
+	background-size: cover;
+	 background-blend-mode: screen;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('E2.jpg');
+}
+h1{
+	color:white;
+	padding-top:50px;
+     padding-bottom: 10px;
+     padding-left:60px;
+	font-family: 'ABeeZee', sans-serif;
+}
+hr{
+	opacity:0.5;
+}
+p{
+	color:white;
+	font-weight: bold;
+	padding-left:150px;
+}
+button{
+	background-color: #359c3f;
+	color:white;
+    height:40px;
+	text-align:center;
+	cursor: pointer;
+	border:1px solid #359c3f;
+    font-size: 18px;
+    border-radius:3px;
+     margin-top: 12px;
+    width:400px;
+    margin-bottom:70px;
+    margin-left:150px;
+    font-weight:120px;
+    outline:none;
+}
+
+.box{
+	border-radius: 3px; 
+    background-color: white;
+    border:1px solid white;
+    padding-left: 11px;
+   margin-left:150px;
+    margin-top:-6px;
+    height:40px;
+    width:400px;
+  
+
+}
+.box:focus{
+	outline:none;
+}
+.forgot{
+	color:white;
+	font-family: 'ABeeZee', sans-serif;
+	padding-left:450px;
+	font-size:17px;
+
+}
+.account{
+	text-align:center;
+	color:white;
+	font-family: 'ABeeZee', sans-serif;
+	font-size:17px;
+	
+	margin-right:100px;
+	padding-bottom: 40px;
+}
+.button1{
+	text-decoration:none;
+	color:#359c3f;
+	font-size:17px;
+	
+	padding-bottom: 40px;
+}
+</style>
+<body>
+<div >
+<h1>Sign In</h1>
+<hr>
+<p>Username/Email:</p>
+<input type = "text" class = "box" id = "username" placeholder = "Username or email"><br>
+<p>Password:</p>
+<input type = "password" class = "box" id = "pw" style = "margin-bottom:12px;"placeholder = "Password"><br>
+<a href="" class = "forgot" style="text-decoration:none;">Forget password?</a><br>
+<a href = "Home page.html"><button onClick= "return checkDetails()">Sign In</button></a>
+
+<p class = "account">Don't have an account?<a href="Register.html" class = "button1">Sign Up</a></p>
+</div>
+</body>
+</html>
