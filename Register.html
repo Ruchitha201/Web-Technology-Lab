@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+			function checkDetails(){
+				var fn = document.getElementById("fullname").value;
+				var p = document.getElementById("pw").value;
+				var e = document.getElementById("email").value;
+				var n = document.getElementById("number").value;
+				var cp = document.getElementById("cpw").value;
+				if(n == "" && p == "" && fn == "" && e == ""){
+				   alert("all details are mandatory");
+					return false;
+				   }
+				   else if(fn.length <= 6){
+				   	alert("leength of the full name must be greater than 6");
+				   	return false;
+				   }
+				   else if(p.length <= 5) {
+				   	alert("password length must contain atleast 6");
+				   	return false;
+				   }
+				   else if(n.length != 10){
+				   	alert("enter correct mobile number");
+				   	return false;
+				   }
+				else if(n == ""){
+				 	alert("mobile number is mandatory");
+				 	return false;
+				 	
+				 }
+				else if(p == ""){
+                       alert("please enter your password");
+                       return false;
+				 }
+				 else if(e == ""){
+				 	alert("email is mandatory");
+				 	return false;
+				 }
+				 else if(p != cp) {
+				 	alert("check confrim password");
+				 	return false;
+				 }
+				 else if(fn == ""){
+				 	alert("full name is mandatory");
+				 }
+				 else{
+				 	return true;
+				 }
+
+			}
+
+		</script>
+<link rel="stylesheet" type = "text/css" href="signUp_styles.css">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Hind:wght@500&family=Questrial&family=Varela+Round&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+div{
+    background: black;
+	margin:auto;
+	top:20%;
+	width:725px;
+	filter:opacity(96%);
+	font-family: 'Questrial', sans-serif;
+	font-size: 13px;
+	border-radius:12px;	
+	margin-top:70px;
+}
+body{
+	background-color: #06021c;
+	background-repeat: no-repeat;
+	background-size: cover;
+	 background-blend-mode: screen;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('E3.jpg');
+}
+
+h1{
+	color:white;
+	padding-top:50px;
+     padding-bottom: 10px;
+     padding-left:60px;
+	font-family: 'ABeeZee', sans-serif;
+
+}
+hr{
+	opacity:0.5;
+}
+.box{
+	border-radius: 3px; 
+    background-color: white;
+    border:1px solid white;
+    padding-left: 11px;
+   margin-left:150px;
+    margin-top:-6px;
+    height:40px;
+    width:400px;
+	outline:none;
+}
+p{
+	color:white;
+	font-weight: bold;
+	padding-left:150px;
+}
+.details{
+	width:100px;
+	height:40px;
+	outline:none;
+	border-radius: 3px; 
+    background-color: white;
+    border:1px solid white;
+    padding-left: 11px;
+     margin-left:150px;
+    margin-top:-6px;
+}
+button{
+	background-color: #359c3f;
+	color:white;
+    height:40px;
+	text-align:center;
+	cursor: pointer;
+	border:1px solid #359c3f;
+    font-size: 15px;
+    border-radius:3px;
+     margin-top: 30px;
+    width:408px;
+    margin-bottom:20px;
+    margin-left:150px;
+    outline:none;
+}
+.account{
+	text-align:center;
+	color:white;
+	font-family: 'ABeeZee', sans-serif;
+	font-size:17px;
+	
+	margin-right:100px;
+	padding-bottom: 40px;
+}
+.button1{
+	text-decoration:none;
+	color:#359c3f;
+	font-size:17px;
+	
+	padding-bottom: 40px;
+}
+</style>
+<body>
+<div>
+<h1>Sign Up</h1>
+<hr><p>Full Name</p>
+<input type = "text" class = "box" id = "fullname" placeholder = "Full name">
+<p>Email</p>
+<input type = "email" class = "box" id = "email" placeholder = "email">
+<p>Mobile number</p>
+<select class = "details" >
+	<option>+91</option>
+					<option>+82</option> 
+					<option>+225</option>
+					<option>+32</option>
+					<option>+65</option>
+					<option>+010</option>
+				</select>
+				<input type = "text" class = "box" style = "width:290px; margin-left:10px;"placeholder="number" id = "number">
+	<p>Password</p>			
+<input type = "text" class = "box" placeholder ="password" id = "pw">
+<p>Confirm Password</p>
+<input type = "text" class = "box" placeholder ="Confirm Password" id = "cpw"><br>
+<a href = "login.html" ><button onClick= "return checkDetails()">Sign Up</button></a>
+
+<p class = "account">Already have an account?<a href = "login.html" class = "button1">Sign In</a>
+
+</p>
+</div>
+</body>
+</html>
