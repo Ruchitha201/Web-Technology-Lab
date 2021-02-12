@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validation(){
+        var n = document.getElementById("username").value;
+        var p = document.getElementById("password").value;
+        if(n == "" && p == ""){
+       alert("Please fill out the username and password");
+       return false;
+        }
+       else if(n == ""){
+       alert("Please fill out the username");
+       return false;
+       }
+       else if(p == ""){
+        alert("Please enter your Password");
+        return false;
+       }
+       else{
+        return true;
+       }
+
+        }
+    </script>
+<meta charset="UTF-8">
+<link rel="stylesheet" type = "text/css" href="signIn_styles.css">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Hind:wght@500&family=Questrial&family=Varela+Round&display=swap" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "LoginServlet" method = "post">
+<div >
+<h1>Sign In</h1>
+<hr>
+<p>Username/Email:</p>
+<input type = "text" class = "box" id = "username" name = "username" placeholder = "Username or email"><br>
+<p>Password:</p>
+<input type = "text" class = "box" id = "password" name = "password" style = "margin-bottom:12px;"placeholder = "Password"><br>
+<a href="" class = "forgot" style="text-decoration:none;">Forget password?</a><br>
+
+
+<a href = "home.html"><button onclick = "return validation()" type = "submit">Sign In</button></a>
+
+<p class = "account">Don't have an account?<a href="SignUp.html" class = "button1">Sign Up</a></p>
+</div>
+</form>
+</body>
+</html>
