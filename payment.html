@@ -1,0 +1,157 @@
+<html>
+<head>
+<script type="text/javascript">
+			function checkDetails(){
+				var na = document.getElementById("name").value;
+				var c = document.getElementById("cvv").value;
+				var n = document.getElementById("number").value;
+				
+				if(na == "" && c == "" && n == "" ){
+					alert("all details are mandatory");
+					return false;
+				}
+				else if(na == ""){
+					alert("please fill out the owner name");
+					return false;
+
+				}
+				else if( c == ""){
+					alert("cvv is mandatory");
+					return false;
+				}
+				else if(n == ""){
+					alert("card number is mandatory");
+					return false;
+				}
+				else if(c.lenght < 3 && c.length > 4){
+					alert("enter correct cvv number");
+					return false;
+				}
+				else if(n.length != 16) {
+					alert("enter correct card number");
+					return false;
+				}
+				 else{
+				 	return true;
+				 }
+
+			}
+
+		</script>
+	<link rel="stylesheet" type = "text/css" href="payment_styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Hind:wght@500&family=Questrial&family=Varela+Round&display=swap" rel="stylesheet">
+	</head>
+	<style>
+	div{
+
+   background:Black;
+	margin:auto;
+	width:700px;
+	top:20%;
+	filter:opacity(96%);
+	font-family: 'Questrial', sans-serif;
+	font-size: 13px;
+	border-radius:12px;	
+	margin-top:70px;
+}
+body{
+	background-color: #06021c;
+	background-repeat: no-repeat;
+	background-size: cover;
+	 background-blend-mode: screen;
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('pay.jpg');
+}
+.details{
+	border-radius: 3px; 
+    background-color:white;
+    border:1px solid white;
+    padding-left: 11px;
+   margin-left:150px;
+    margin-top:-6px;
+    height:40px;
+    width:400px;
+  
+
+}
+.details:focus{
+	outline:none;
+}
+.heading{
+	color:white;
+	padding-top:50px;
+     padding-bottom: 10px;
+     padding-left:60px;
+	font-family: 'ABeeZee', sans-serif;
+
+}
+p{
+	color:white;
+	font-weight: bold;
+	padding-left:150px;
+}
+button{
+	background-color: #359c3f;
+	color:white;
+    height:40px;
+	text-align:center;
+	cursor: pointer;
+	border:1px solid #359c3f;
+    font-size: 17px;
+    border-radius:3px;
+     margin-top: 20px;
+    width:400px;
+    margin-bottom:70px;
+    margin-left:150px;
+    font-weight:bold;
+     outline:none;
+}
+
+a{
+	text-decoration: none;
+}
+	</style>
+	<body>
+     <div>
+		<h1 class = "heading">Payment Details</h1>
+		<hr>
+		<br>
+		<p>Owner</p>
+		<input type = "text" class = "details" id = "name" placeholder = "">
+		<p> Cvv</p>
+		<input type = "text" class = "details" id = "cvv" placeholder = "">
+		<p>Card Number</p>
+		<input type = "text" class = "details" id = "number" placeholder = "">
+		<p>Expiration Date</p>
+		<select class = "details" style = "width:200px;" >
+					
+					<option>Januray</option>
+					<option>Feburay</option> 
+					<option>march</option>
+					<option>April</option>
+					<option>May</option>
+					<option>june</option>
+					<option>July</option>
+					<option>August</option>
+					<option>September</option>
+					<option>October</option>
+					<option>November</option>
+					<option>December</option>
+				</select> 
+				<select class = "details" style = "width:150px; margin-left:40px;">
+
+		            <option>2020</option>
+		            <option>2021</option>
+		            <option>2022</option>
+		            <option>2023</option>
+		            <option>2024</option>
+					<option>2025</option>
+					<option>2026</option>
+					<option>2027</option>
+		            <option>2028</option>
+		        </select>
+         <br>
+
+	    <a href = "order confirmation.html"><button onClick= "return checkDetails()">Confrim</button></a>
+	</div>
+	</body>
+	</html>
